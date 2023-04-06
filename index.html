@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levi basic</title>
+    <script type="text/javascript">
+        
+      /**  function showThongbao(dtb) {
+            var thongbao = " ";
+            switch(dtb) {
+                case 9:
+                    thongbao = "giỏi";break;
+                case 8:
+                    thongbao = "khá";break;
+                case 7: 
+                    thongbao = "yếu"; break;
+                default:
+                    thongbao = "tệ";
+                }
+            alert(thongbao);
+
+        } **/
+
+        
+        function Sum(x,y){
+            var tong = x + y;
+            return tong;
+            alert(tong);
+        }
+        
+        function Xuat10CauThongWhile(toida){
+            i = 1;
+           while(i<toida){
+                document.write("hello <br>");
+                i++;
+            } 
+        }
+        
+        function Xuat10CauThongDoWhile(toida){
+            i = 1;
+            do{
+                document.write("hello <br>");
+                i++;
+            }while(i < toida);
+        }
+
+        function changeColor(choose){
+
+                // onClick, onChange, onMouseDown, onMouseUp, onFocus, onBlur, onMoseOver, onMoseOut, onLoad, onSubmit
+               /** if(choose == 1){
+                    document.getElementById("nut1").style.backgroundColor = "red";
+                }else{
+                    document.getElementById("nut1").style.backgroundColor = "grey";
+                } **/         
+        }
+
+        function ThayDoiChon(){
+            var dropdown = document.getElementById("chon");
+            var theP = document.getElementById("xuat");
+            theP.innerHTML = dropdown.value;
+        }
+
+        
+        
+
+
+    </script>
+</head>
+<body>
+    <input type="button" value="checkWhile" onmousedown="changeColor(1)" onmouseup="changeColor(2)"  id="nut1">
+        
+    </input>
+    <input type="button" value="checkDOWhile" onclick="Xuat10CauThongDoWhile(1)" id="nut">
+        
+    </input>
+
+    <p id="xuat"></p>
+    <select id="chon" value="select" onChange="ThayDoiChon()">
+        <option value="VietNam">Viet Nam</option>
+        <option value="USA">USA</option>
+    </select>
+</body>
+</html>
